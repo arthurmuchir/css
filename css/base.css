@@ -1,0 +1,61 @@
+html {
+	box-sizing: border-box;
+
+	font-family: var(--font-stack-sans);
+	font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	letter-spacing: 0.03em;
+	line-height: 1.4;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: transparent;
+
+	background-size: 20px 1px, 1px 20px, 5px 1px, 1px 5px;
+	background-image: linear-gradient(to left, #828282 1px, transparent 1px), linear-gradient(to top, #828282 1px, transparent 1px),
+					  linear-gradient(to left, color(#828282 a(0.2)) 1px, transparent 1px), linear-gradient(to top, color(#828282 a(0.2)) 1px, transparent 1px);
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+button {
+	padding: 0;
+	border: 0;
+	outline: 0;
+
+	color: inherit;
+	font: inherit;
+	text-transform: inherit;
+
+	background-color: transparent;
+	cursor: pointer;
+}
+
+hr {
+	height: 1px;
+	border: 0;
+
+	background-color: black;
+}
+
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+}
+
+input:focus {
+	outline: 0;
+}

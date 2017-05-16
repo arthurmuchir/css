@@ -1,0 +1,8 @@
+.text {
+
+	&-15 {
+		@include rhythm-15;
+
+		font-weight: 400;
+	}
+}

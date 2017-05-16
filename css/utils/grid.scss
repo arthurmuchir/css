@@ -1,0 +1,23 @@
+$grid-margin: 20 / 1440 * 100vw;
+$grid-gutter: 40 / 1440 * 100vw;
+
+@mixin column($size, $total) {
+	display: inline-block;
+	vertical-align: top;
+	width: calc((100vw - 2 * #{$grid-margin}) * #{$size / $total} - (#{$grid-gutter} - #{$grid-gutter} * #{$size / $total}));
+
+	&:not(:first-child) {
+		margin-left: $grid-gutter;
+	}
+}
+
+@mixin offset($size, $total) {
+
+	&:first-child {
+		margin-left: calc((100vw - 2 * #{$grid-margin}) * #{$size / $total} - (#{$grid-gutter} - #{$grid-gutter} * #{$size / $total}) + #{$grid-gutter};
+	}
+
+	&:not(:first-child) {
+		margin-left: calc((100vw - 2 * #{$grid-margin}) * #{$size / $total} - (#{$grid-gutter} - #{$grid-gutter} * #{$size / $total}) + #{2 * $grid-gutter};
+	}
+}

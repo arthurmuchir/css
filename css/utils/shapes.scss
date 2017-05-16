@@ -1,0 +1,44 @@
+@mixin shapes-triangle-default() {
+	display: inline-block;
+	vertical-align: top;
+	width: 0;
+	height: 0;
+}
+
+@mixin triangle-down($size, $color) {
+	@include shapes-triange-default();
+
+	border-left: $size solid transparent;
+	border-right: $size solid transparent;
+	border-bottom: $size solid $color;
+}
+
+@mixin triangle-up($size, $color) {
+	@include shapes-triange-default();
+
+	border-left: $size solid transparent;
+	border-right: $size solid transparent;
+	border-top: $size solid $color;
+}
+
+@mixin triangle-left($size, $color) {
+	@include shapes-triange-default();
+
+	border-left: $size solid $color;
+	border-top: $size solid transparent;
+	border-bottom: $size solid transparent;
+}
+
+@mixin triangle-right($size, $color) {
+	@include shapes-triange-default();
+
+	border-top: $size solid transparent;
+	border-right: $size solid $color;
+	border-bottom: $size solid transparent;
+}
+
+@mixin circle($size) {
+	width: $size;
+	height: $size;
+	border-radius: 50%;
+}
